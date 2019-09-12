@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import NasaCard from "./NasaCard";
+import NasaFooter from "./NasaFooter"
 import axios from "axios";
 
 
@@ -9,10 +10,11 @@ function NasaImages() {
     useEffect(() => {
       //axios
       axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=g2jo6na4Gfe8IcnK5eOv2yNpqYfwmNQg2pQp9BoA&date=2012-03-14`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=g2jo6na4Gfe8IcnK5eOv2yNpqYfwmNQg2pQp9BoA`)
         .then(response => {
-        setNasa(nasa)
-        console.log("nasa photos",response.data);
+          const pod = response.data;
+        setNasa(pod)
+        console.log("nasa photos",pod);
         })
         .catch(error => {
           console.log("Cant find what you're looking for", error);
@@ -21,14 +23,15 @@ function NasaImages() {
   
 return (
     <div className = "nasaImages">
+   
             <NasaCard 
             key= {nasa.key}
             title= {nasa.title} 
             url= {nasa.hdurl} 
             date= {nasa.date} 
             description= {nasa.explanation} /> 
+            <NasaFooter copyright={nasa.copyright} />
     </div>
-    
     )  
 }
 export default NasaImages;

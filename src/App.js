@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
 import NasaImages from "./components/NasaImages";
-import NasaFooter from "./components/NasaFooter";
+import NasaHeader from "./components/NasaHeader";
 
 function App() {
   return (
     <div className="App">
+      <NasaHeader />
       <h1>Nasa Photo of The Day</h1>
-      {/* <NasaHeader /> */}
       <NasaImages />
-      <NasaFooter />
     </div>
   );
 }

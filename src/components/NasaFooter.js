@@ -1,8 +1,9 @@
 import React from "react";
-const NasaFooter = () => {
+
+const NasaFooter = props => {
   return (
     <div className="nasafooter">
-      <p className="contact">email: nasa@nasa.org</p>
+      <p className="copyright">© {props.copyright}</p>
     </div>
   );
 };
