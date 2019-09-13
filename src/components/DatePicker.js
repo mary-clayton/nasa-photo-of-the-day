@@ -1,20 +1,14 @@
 import React from "react";
-import {data} from "./Data";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const DateSelector = props =>{
-    return (
-        <div>
-            <h1>Pick a Date: </h1>
-            <select onChange={props.fnc}>
-                {
-                    data.map((date, index) =>{
-                        return (<option key={index} value={date}>{date}</option>);
-                    })
-                }
-            </select>
-        </div>
-    );
+const DateInput = props => (
+  <div>
+    <DatePicker 
+    selected={props.date} 
+    onChange={props.changeDate} 
+    />
+  </div>
+);
 
-};
-
-export default DateSelector;
+export default DateInput;
