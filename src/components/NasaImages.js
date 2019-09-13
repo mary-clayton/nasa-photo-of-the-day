@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import NasaCard from "./NasaCard";
 import NasaFooter from "./NasaFooter"
 import axios from "axios";
-import {data} from "./Data";
+
 
 
 function NasaImages() {

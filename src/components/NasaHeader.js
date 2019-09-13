@@ -6,7 +6,11 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
+import styled from "styled-components"
 
+  const Logo = styled.a `
+  display: flex;
+  `;
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +29,9 @@ export default class Example extends React.Component {
   return (
     <div>
       <Navbar className="navbar" light expand="md">
+        <Logo className = "logo" href ="/home/">
         <img className="nasalogo" src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt= "nasa logo"/>
+        </Logo>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
@@ -36,7 +42,7 @@ export default class Example extends React.Component {
               <NavLink className="navItem" href="/Contact/">Contact</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="navItem" href="/Info/">Info</NavLink>
+              <NavLink className="navItem" href="https://www.nasa.gov/">Info</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
