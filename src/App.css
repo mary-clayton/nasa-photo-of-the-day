@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -30,4 +31,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html body {
+  background: #343a40 ; 
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navItem {
+color: white !important;
+}
+
+.cardtext {
+  color: #000 !important;
+  padding: 3% 0;
+}
+
+.cards {
+margin: 5% 10%;
+}
+
+.nasalogo {
+  width: 15%;
+  margin: 0 -3% ;
 }
